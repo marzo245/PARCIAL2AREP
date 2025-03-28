@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Search</title>
+    <script>
+        async function search(type) {
+            const value = document.getElementById('value').value;
+            const lista = document.getElementById('lista').value.split(',').map(Number);
+            const response = await fetch(`/proxy/${type}Search?value=${value}&lista=${lista}`);
+            const result = await response.json();
+            document.getElementById('result').innerText = `Result: ${result}`;
+        }
+    </script>
+</head>
+<body>
+    <h1>Calculadora Search</h1>
+    <form onsubmit="event.preventDefault(); search('lineal');">
+        <label for="value">Value:</label>
+        <input type="number" id="value" name="value" required>
+        <label for="lista">List (comma separated):</label>
+        <input type="text" id="lista" name="lista" required>
+        <button type="submit">Lineal Search</button>
+    </form>
+    <form onsubmit="event.preventDefault(); search('binary');">
+        <label for="value">Value:</label>
+        <input type="number" id="value" name="value" required>
+        <label for="lista">List (comma separated):</label>
+        <input type="text" id="lista" name="lista" required>
+        <button type="submit">Binary Search</button>
+    </form>
+    <p id="result"></p>
+</body>
+</html>

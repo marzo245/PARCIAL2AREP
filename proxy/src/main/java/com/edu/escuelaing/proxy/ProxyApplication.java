@@ -19,30 +19,4 @@ public class ProxyApplication {
     }
 }
 
-@RestController
-class ProxyController {
 
-    @Value("${service.instances}")
-    private List<String> serviceInstances;
-
-    private AtomicInteger counter = new AtomicInteger(0);
-
-    private RestTemplate restTemplate = new RestTemplate();
-
-    @GetMapping("/linealSearch")
-    public int calcularLineal(@RequestParam int value, @RequestParam List<Integer> lista) {
-        String serviceUrl = getNextServiceInstance() + "/linealSearch?value=" + value + "&lista=" + lista;
-        return restTemplate.getForObject(serviceUrl, Integer.class);
-    }
-
-    @GetMapping("/binarySearch")
-    public int calcularBinario(@RequestParam int value, @RequestParam List<Integer> lista) {
-        String serviceUrl = getNextServiceInstance() + "/binarySearch?value=" + value + "&lista=" + lista;
-        return restTemplate.getForObject(serviceUrl, Integer.class);
-    }
-
-    private String getNextServiceInstance() {
-        int index = counter.getAndIncrement() % serviceInstances.size();
-        return serviceInstances.get(index);
-    }
-}
