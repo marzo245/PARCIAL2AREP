@@ -12,3 +12,4 @@ Los dos controller que se definieron en la parte logica fueron:
 para probar se intento realizar con postman debido a que el proxy no logre desplegarlo pero este no respondio por lo que no pude pandar el objeto dto
 ![image](https://github.com/user-attachments/assets/03601a38-740e-4765-b1ff-3d2ab17fb1cc)
 
+el video esta en el powerpoint
