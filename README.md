@@ -33,95 +33,183 @@ C:.
 │   README.md
 │   
 ├───.idea
+
 │       .gitignore
+
 │       misc.xml
+
 │       modules.xml
+
 │       PARCIAL2AREP.iml
+
 │       vcs.xml
+
 │       workspace.xml
+
 │
 ├───calculadorSearch
+
 │   │   .gitattributes
+
 │   │   .gitignore
+
 │   │   mvnw
+
 │   │   mvnw.cmd
+
 │   │   pom.xml
+
 │   │
+
 │   ├───.mvn
+
 │   │   └───wrapper
+
 │   │           maven-wrapper.properties
+
 │   │
+
 │   └───src
+
 │       ├───main
+
 │       │   ├───java
+
 │       │   │   └───com
+
 │       │   │       └───edu
+
 │       │   │           └───escuelaing
+
 │       │   │               └───calculadorSearch
+
 │       │   │                   │   CalculadorSearchApplication.java
+
 │       │   │                   │
+
 │       │   │                   ├───controlador
+
 │       │   │                   │       CalculadoraSearchControlador.java
+
 │       │   │                   │
+
 │       │   │                   └───modelo
+
 │       │   │                           ParametrosDTO.java
+
 │       │   │
+
 │       │   └───resources
+
 │       │           application.properties
 │       │
+
 │       └───test
+
 │           └───java
+
 │               └───com
+
 │                   └───edu
+
 │                       └───escuelaing
+
 │                           └───calculadorSearch
+
 │                                   CalculadorSearchApplicationTests.java
+
 │
+
 └───proxy
+
     │   .gitattributes
+    
     │   .gitignore
+    
     │   mvnw
+    
     │   mvnw.cmd
+    
     │   pom.xml
+    
     │
+    
     ├───.mvn
+    
     │   └───wrapper
+    
     │           maven-wrapper.properties
+    
     │
+    
     ├───bin
+    
     │   └───main
+    
     │       └───com
+    
     │           └───edu
+    
     │               └───escuelaing
+    
     │                   └───proxy
+    
     │                           ProxyApplication.class
+    
     │
+    
     └───src
+    
         ├───main
+        
         │   ├───java
+        
         │   │   └───com
+        
         │   │       └───edu
+        
         │   │           └───escuelaing
+        
         │   │               └───proxy
+        
         │   │                       ProxyApplication.java
+        
         │   │
+        
         │   └───resources
+        
         │           application.properties
+        
         │
+        
         └───test
+        
             └───java
+            
                 └───com
+                
                     └───edu
+                    
                         └───escuelaing
+                        
                             └───proxy
+                            
                                     ProxyApplicationTests.java
+
+
+
 
 
 ## Instrucciones de Ejecución
 
+
+
 1. Asegúrate de tener todas las dependencias necesarias instaladas.
+
 2. Ejecuta las instancias utilizando el comando adecuado según la configuración del proyecto.
+
 3. Inicializar las instancias 
+
 
 ## Aclaraciones
 
